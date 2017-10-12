@@ -1,0 +1,9 @@
+<% if @emotition.like? %>
+  $('.review-like').addClass('emotition-opacity');
+  $('.review-dislike').removeClass('emotition-opacity');
+<% else %>
+  $('.review-dislike').addClass('emotition-opacity');
+  $('.review-like').removeClass('emotition-opacity');
+<% end %>
+$('.review-like-size').text('<%= @review.likes.size %>');
+$('.review-dislike-size').text('<%= @review.dislikes.size %>');
